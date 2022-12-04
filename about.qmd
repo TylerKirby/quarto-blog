@@ -1,0 +1,18 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/tyler-kirby/
+    - icon: github
+      text: Github
+      href: https://github.com/TylerKirby
+
+---
+
+I’ve been working in data science for about firve years now, and previously studied classical lanaguages and literature. When I’m not thinking about ways to improve the world with machine learning or why Odysseus couldn’t help but taunt the cyclops, I can be found reading widely, cooking extensively and overburdening myself with yet more musical instruments.
+
+I live in St. Louis, Missouri with my wife and two happy dachshunds.
