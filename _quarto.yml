@@ -2,17 +2,18 @@ project:
   type: website
 
 website:
-  title: "quarto-blog"
+  title: "J. Tyler Kirby"
   navbar:
     right:
       - about.qmd
+      - papers.qmd
       - icon: github
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
 format:
   html:
-    theme: cosmo
+    theme: simplex
     css: styles.css
 
 
