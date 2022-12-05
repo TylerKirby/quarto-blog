@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2021-05-05">
+<meta name="dcterms.date" content="2022-12-05">
 <meta name="description" content="Bayesian machine learning often requires working with posterior distributions that have no known closed form. There are plenty of approximation methods, though many tend to be difficult to understand and implement or too computationally expensive. This post provides an overview of the Laplace Approximation, an exceptionally simple approach that is seeing a resurgence in recent deep learning papers.">
 
-<title>quarto-blog - Laplace Approximation</title>
+<title>J. Tyler Kirby - Laplace Approximation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,7 +124,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -137,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">quarto-blog</span>
+    <span class="navbar-title">J. Tyler Kirby</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -148,6 +163,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li class="nav-item">
     <a class="nav-link" href="../about.html">
  <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../papers.html">
+ <span class="menu-text">Papers and Talks</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
@@ -188,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 5, 2021</p>
+        <p class="date">December 5, 2022</p>
       </div>
     </div>
     
@@ -233,10 +252,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="2021-05-05-laplace_files/figure-html/cell-2-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<p>The true closed form solution for the posterior above is {% fn 1 %}</p>
-<p><span class="math display">\[
+<p>The true closed form solution for the posterior<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> above is</p>
+<p><span class="math display">
 p(z) = \exp(\frac{-z^2}{2}) \cdot (1 + \exp(-20z-4))^{-1}
-\]</span></p>
+</span></p>
 <p>Unfortunately we will very rarely have direct access to the closed form solution for the posterior, so we must approximate. Enter: Pierre-Simon Laplace.</p>
 </section>
 <section id="a-solution-from-parisian-dice-parlors" class="level2">
@@ -244,37 +263,37 @@ p(z) = \exp(\frac{-z^2}{2}) \cdot (1 + \exp(-20z-4))^{-1}
 <p>The Marquis de Laplace was a busy man. From his service to one Napoleon Bonaparte to his time frequenting gambling dens, there was no shortage of opportunities where Laplace needed to estimate the odds of an event. His contributions to the field of probability are almost unmatched: he rigorously formulated and popularized Bayes’ Theorem, discovered probability generating functions, tied the least squares method to probability, and proved the central limit theorem which underpins the fields of statistics and probability today. But right now we are mostly concerned with a method developed in his 1774 manuscript <em>Mémoires de Mathématique et de Physique</em>.</p>
 <section id="deriving-the-laplace-approximation" class="level3">
 <h3 class="anchored" data-anchor-id="deriving-the-laplace-approximation">Deriving the Laplace Approximation</h3>
-<p>The Laplace Approximation is a very general method for working with integrals of the form <span class="math display">\[
+<p>The Laplace Approximation is a very general method for working with integrals of the form <span class="math display">
 \int^a_b \exp(M \cdot f(x)) dx
-\]</span></p>
-<p>where <span class="math inline">\(M\)</span> is some large number and <span class="math inline">\(f(x)\)</span> is at least twice differentiable.</p>
-<p>The basic idea is that we can use a Taylor series around the global maximum of the function as an approximation of the original intractable integral. Suppose that <span class="math inline">\(f(x)\)</span> has a global maximum around <span class="math inline">\(x_0\)</span> and that <span class="math inline">\(x_0\)</span> is not an endpoint. Then, using the first few terms of the Taylor series we have</p>
-<p><span class="math display">\[
+</span></p>
+<p>where <span class="math inline">M</span> is some large number and <span class="math inline">f(x)</span> is at least twice differentiable.</p>
+<p>The basic idea is that we can use a Taylor series around the global maximum of the function as an approximation of the original intractable integral. Suppose that <span class="math inline">f(x)</span> has a global maximum around <span class="math inline">x_0</span> and that <span class="math inline">x_0</span> is not an endpoint. Then, using the first few terms of the Taylor series we have</p>
+<p><span class="math display">
 f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{1}{2}f''(x_0)(x-x_0)^2
-\]</span></p>
-<p>Knowing that <span class="math inline">\(f(x_0)\)</span> is a global maximum allows us to simplify a bit further since <span class="math inline">\(f'(x_0)\)</span> should be 0.</p>
-<p><span class="math display">\[
+</span></p>
+<p>Knowing that <span class="math inline">f(x_0)</span> is a global maximum allows us to simplify a bit further since <span class="math inline">f'(x_0)</span> should be 0.</p>
+<p><span class="math display">
 f(x) \approx f(x_0) - \frac{1}{2}|f''(x_0)|(x-x_0)^2
-\]</span></p>
-<p>If we plug this back into our original integral equation we have <span class="math display">\[
+</span></p>
+<p>If we plug this back into our original integral equation we have <span class="math display">
 \int^a_b \exp(M \cdot f(x)) dx \approx \int^a_b \exp(M \cdot f(x_0) - \frac{1}{2}|f''(x_0)|(x-x_0)^2) dx
-\]</span></p>
-<p>which further simplifies to <span class="math display">\[
+</span></p>
+<p>which further simplifies to <span class="math display">
 \exp(M f(x_0)) \cdot \int^a_b \exp(- \frac{1}{2}|f''(x_0)|(x-x_0)^2) dx
-\]</span></p>
+</span></p>
 <p>Recall that the Gaussian integral has the form:</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \int \exp(-x)^2 dx = \sqrt{\pi}
-\]</span></p>
+</span></p>
 <p>Assuming that the integral we’re interested in is an indefinite integral as is the case with most probability density functions, the Laplace Approximation allows us to use the Gaussian integral to approximate this sort of intractable integral. Using the Gaussian integral, we can reduce the above equation into the final formulation of Laplace Approximation:</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \int^a_b \exp(M \cdot f(x)) dx \approx \sqrt{\frac{2 \pi}{M |f''(x_0)|}}\exp(Mf(x_0))
-\]</span></p>
-<p>The accuracy of this approximation improves as <span class="math inline">\(M \rightarrow \infty\)</span>.</p>
+</span></p>
+<p>The accuracy of this approximation improves as <span class="math inline">M \rightarrow \infty</span>.</p>
 </section>
 <section id="a-simple-application" class="level3">
 <h3 class="anchored" data-anchor-id="a-simple-application">A Simple Application</h3>
-<p>Let’s consider an application of the Laplace Approximation to a well-known problem in computer science. Suppose you wish to write a program to quickly compute <span class="math inline">\(f(n) = n!\)</span>. Factorial equations are used all throughout physics, probability, and mathematics with practical uses in computing Bézier curves for computer graphics and time complexity equations for sorting algorithms.</p>
+<p>Let’s consider an application of the Laplace Approximation to a well-known problem in computer science. Suppose you wish to write a program to quickly compute <span class="math inline">f(n) = n!</span>. Factorial equations are used all throughout physics, probability, and mathematics with practical uses in computing Bézier curves for computer graphics and time complexity equations for sorting algorithms.</p>
 <p>A naive solution may look like:</p>
 <div class="cell" data-pycharm="{&quot;name&quot;:&quot;#%%\n&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(n):</span>
@@ -289,30 +308,30 @@ f(x) \approx f(x_0) - \frac{1}{2}|f''(x_0)|(x-x_0)^2
 </div>
 </div>
 <p>If we needed to run this function on very large integers thousands of times a second which may often be the case especially in computer graphics, then we need this code to be especially fast. Multiplying increasing large integers in a for loop will probably become a bottleneck rather quickly, so this is a good opportunity to apply an approximation. Let’s begin with the similar and useful Gamma function:</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \Gamma(n) = (n-1)! = \int_0^{\infty} \exp(-x) x^{n-1} dx
-\]</span></p>
+</span></p>
 <p>Our factorial equation can then be written as</p>
-<p><span class="math display">\[
+<p><span class="math display">
 n! = \Gamma(n + 1) = \int_0^{\infty} \exp(-x)x^ndx
-\]</span></p>
-<p>By performing a change of variables so that <span class="math inline">\(x = nz\)</span> and <span class="math inline">\(dx = n dz\)</span> we can derive the following</p>
-<p><span class="math display">\[
+</span></p>
+<p>By performing a change of variables so that <span class="math inline">x = nz</span> and <span class="math inline">dx = n dz</span> we can derive the following</p>
+<p><span class="math display">
 = \int_0^{\infty} \exp(-nz) (nz)^n n dz \\
 = n^{n+1} \int_0^{\infty} \exp(-nz)z^n dz \\
 = n^{n+1} \int_0^{\infty} \exp(-nz) \exp(n \ln z) dz \\
 = n^{n+1} \int_0^{\infty} \exp(n (\ln z - z)) dz
-\]</span></p>
-<p>The final integral above has the form required for the Laplace Approximation: <span class="math inline">\(\int^a_b \exp(M \cdot f(x)) dx\)</span> since <span class="math inline">\(f(z) = \ln z - z\)</span> is twice differentiable. Recall that as <span class="math inline">\(M \rightarrow \infty\)</span>, the approximation is more accurate so our final approximation of the factorial equation above will be more accurate for larger choices of <span class="math inline">\(n\)</span>.</p>
+</span></p>
+<p>The final integral above has the form required for the Laplace Approximation: <span class="math inline">\int^a_b \exp(M \cdot f(x)) dx</span> since <span class="math inline">f(z) = \ln z - z</span> is twice differentiable. Recall that as <span class="math inline">M \rightarrow \infty</span>, the approximation is more accurate so our final approximation of the factorial equation above will be more accurate for larger choices of <span class="math inline">n</span>.</p>
 <p>Using the Laplace approximation, we arrive at Stirling’s Approximation for computing factorials:</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \int^a_b \exp(M \cdot f(x)) dx \approx \sqrt{\frac{2 \pi}{M |f''(x_0)|)}}\exp(Mf(x_0))\\
 n^{n+1} \int_0^{\infty} \exp(n (\ln z - z)) dz \approx n^{n+1} \sqrt{\frac{2 \pi}{n |f''(x_0)|}}\exp(n f(x_0))
-\]</span></p>
-<p><span class="math inline">\(f(z) = \ln z - z\)</span>, so <span class="math inline">\(f'(z) = \frac{1}{z} - 1\)</span> and <span class="math inline">\(f''(z) = -\frac{1}{z^2}\)</span>. The max of <span class="math inline">\(f(z)\)</span> is found at <span class="math inline">\(z=1\)</span>, so <span class="math inline">\(f(z_0=1) = -1\)</span> and <span class="math inline">\(f''(z_0 = 1) = -1\)</span> as well. With this we arrive at the final approximation:</p>
-<p><span class="math display">\[
+</span></p>
+<p><span class="math inline">f(z) = \ln z - z</span>, so <span class="math inline">f'(z) = \frac{1}{z} - 1</span> and <span class="math inline">f''(z) = -\frac{1}{z^2}</span>. The max of <span class="math inline">f(z)</span> is found at <span class="math inline">z=1</span>, so <span class="math inline">f(z_0=1) = -1</span> and <span class="math inline">f''(z_0 = 1) = -1</span> as well. With this we arrive at the final approximation:</p>
+<p><span class="math display">
 n! \approx n^{n+1} \sqrt{\frac{2 \pi}{n}}e^{-n}
-\]</span></p>
+</span></p>
 <p>which in Python would be</p>
 <div class="cell" data-pycharm="{&quot;name&quot;:&quot;#%%\n&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> stirling_approx(n):</span>
@@ -330,7 +349,7 @@ n! \approx n^{n+1} \sqrt{\frac{2 \pi}{n}}e^{-n}
 <pre><code>2.0 %</code></pre>
 </div>
 </div>
-<p>Note that as <span class="math inline">\(n \rightarrow \infty\)</span> the percent error approaches 0 for this approximation.</p>
+<p>Note that as <span class="math inline">n \rightarrow \infty</span> the percent error approaches 0 for this approximation.</p>
 </section>
 </section>
 <section id="returning-to-uncertainty" class="level2">
@@ -338,7 +357,7 @@ n! \approx n^{n+1} \sqrt{\frac{2 \pi}{n}}e^{-n}
 <p>Now that we’ve covered the mechanics of the Laplace Approximation and applied it to the simple factorial problem, let’s return to our original problem and approximate that tricky posterior.</p>
 <p>We need to know 1) at which point the probability density function is maximized, i.e., the mode of the posterior and then 2) we need to evaluate that point with the second derivative of the probability density function. If we were approximating a multivariate distribution, this then becomes slightly more complex by requiring us to determine the Hessian matrix of the posterior.</p>
 <p>Finding the mode of a distribution is typically straightforward. If we are working in a model context like Bayesian logistic regression, then we can typically compute the <em>maximum a posteriori</em> (MAP) estimate directly. Otherwise, we can sample the distribution to determine the mode. Note, however, that distributions of higher dimensions cannot be sampled efficiently so it is generally ideal to work with algorithms where MAP estimations are trivial.</p>
-<p>Second derivatives and Hessians unfortunately were historically difficult to determine numerically, but thankfully this is changing. When working with well-studied algorithms like Bayesian logistic regression, it is usually possible to find the necessary derivatives from the loss function either directly or with a numerical techniques like Newton’s method. These tend to be quite compute expensive, but there have been a lot of recent advances that make this process much more efficient.{% fn 2 %}</p>
+<p>Second derivatives and Hessians unfortunately were historically difficult to determine numerically, but thankfully this is changing. When working with well-studied algorithms like Bayesian logistic regression, it is usually possible to find the necessary derivatives from the loss function either directly or with a numerical techniques like Newton’s method. These tend to be quite compute expensive, but there have been a lot of recent advances that make this process much more efficient.</p>
 <p>Let’s take another look at that tricky posterior from earlier:</p>
 <div class="cell" data-pycharm="{&quot;name&quot;:&quot;#%%\n&quot;}" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="6">
@@ -348,20 +367,20 @@ n! \approx n^{n+1} \sqrt{\frac{2 \pi}{n}}e^{-n}
 <p><img src="2021-05-05-laplace_files/figure-html/cell-6-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<p>We essentially want to find a PDF <span class="math inline">\(q(x)\)</span> to approximate our unknown <span class="math inline">\(p(x)\)</span> above. In the context of continuous probability distributions, we typically prefer to work with the negative log likelihood since it is tends to be easier to optimize than the original likelihood function. Let’s revisit our derivation of the Laplace Approximation to consider the log likelihood <span class="math inline">\(\ln p(x)\)</span>. The Taylor approximation is <span class="math display">\[
+<p>We essentially want to find a PDF <span class="math inline">q(x)</span> to approximate our unknown <span class="math inline">p(x)</span> above. In the context of continuous probability distributions, we typically prefer to work with the negative log likelihood since it is tends to be easier to optimize than the original likelihood function. Let’s revisit our derivation of the Laplace Approximation to consider the log likelihood <span class="math inline">\ln p(x)</span>. The Taylor approximation is <span class="math display">
 \ln p(x) \approx \ln p(x_0) -\frac{1}{2} (-p''(x_0)) (x-x_0)^2
-\]</span> Exponetiating the above leads to <span class="math display">\[
+</span> Exponetiating the above leads to <span class="math display">
 p(x) \approx p(x_0) \exp(-\frac{p''(x_0)}{2}(x-x_0)^2)
-\]</span> Again recognizing that <span class="math inline">\(\exp(-\frac{p''(x_0)}{2}(x-x_0)^2)\)</span> is essentially an unnormalized Gaussian PDF, we can formulate the normalized Gaussian <span class="math inline">\(q(x)\)</span> that we can use to approximate our posterior: <span class="math display">\[
+</span> Again recognizing that <span class="math inline">\exp(-\frac{p''(x_0)}{2}(x-x_0)^2)</span> is essentially an unnormalized Gaussian PDF, we can formulate the normalized Gaussian <span class="math inline">q(x)</span> that we can use to approximate our posterior: <span class="math display">
 q(x) = \sqrt{\frac{-p''(x_0)}{2\pi}} \exp(-\frac{p''(x_0)}{2}(x-x_0)^2)
-\]</span></p>
-<p>Now we just need to compute the mode of the posterior <span class="math inline">\(x_0\)</span> and the term <span class="math inline">\(p''(x_0)\)</span>. Below we compute the mode by sampling the distribution. Note that this may not always be possible, but in cases where the mode or <span class="math inline">\(p''(x_0)\)</span> cannot be found by sampling we often have direct access to the loss function or posterior PDF from which can we derive a closed form solution for the Laplace approximation.</p>
+</span></p>
+<p>Now we just need to compute the mode of the posterior <span class="math inline">x_0</span> and the term <span class="math inline">p''(x_0)</span>. Below we compute the mode by sampling the distribution. Note that this may not always be possible, but in cases where the mode or <span class="math inline">p''(x_0)</span> cannot be found by sampling we often have direct access to the loss function or posterior PDF from which can we derive a closed form solution for the Laplace approximation.</p>
 <div class="cell" data-pycharm="{&quot;name&quot;:&quot;#%%\n&quot;}" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sample_interval <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1000</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>posterior_samples <span class="op">=</span> p(sample_interval)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>max_point <span class="op">=</span> sample_interval[np.argmax(posterior_samples)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Now we approximate <span class="math inline">\(p''(x_0)\)</span>. For this example, we’ll just use <code>scipy.misc.derivative</code> which is an implementation of the central difference equation for approximation.{% fn 3 %} Again this assumes we can sample the posterior directly.</p>
+<p>Now we approximate <span class="math inline">p''(x_0)</span>. For this example, we’ll just use <code>scipy.misc.derivative</code> which is an implementation of the central difference equation for approximation. Again this assumes we can sample the posterior directly.</p>
 <div class="cell" data-pycharm="{&quot;name&quot;:&quot;#%%\n&quot;}" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.misc <span class="im">import</span> derivative</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -386,12 +405,17 @@ q(x) = \sqrt{\frac{-p''(x_0)}{2\pi}} \exp(-\frac{p''(x_0)}{2}(x-x_0)^2)
 <p>We should note the flaws with this method though. Some of our approximations are quite expensive. Numerically determining the second derivative with the central difference equation for a single variable once may not be a big deal, but this will quickly become infeasible as we increase the dimensionality of the distribution. Additionally, if this was part of a larger model training loop, approximating a Hessian matrix every batch would be prohibatively expensive. For the multidimensional case where approximating a Hessian matrix is necessary, recent advances such as <a href="https://arxiv.org/abs/1503.05671">Kronecker-factored approximate curvature (KFAC)</a> make the Laplace approximation much more tractable to the point where it can be used in modern deep learning pipelines for general uncertainty estimation as it is in <a href="https://arxiv.org/abs/2106.14806">this recent paper</a>.</p>
 <p>Beyond computational concerns, the underlying assumptions of the Laplace approximation may not be approriate for all problems. It is assumed that the true posterior is roughly Gaussian, but if it is in fact a heavily skewed Weibull distribution for example, then the approximated Gaussian will probably not be appropriate. Note too that the Laplace approximation puts the most emphasis on estimating the mode of the true distribution. If you are more interested in accurately capturing its variance instead, then other approximation techniques may be more appropriate.</p>
 <p>The Laplace approximation is a simple but effective technique for approximating tricky posterior distributions. Though not perfect, it is nonetheless an important tool to have in the toolbox especially when working with Bayesian machine learning techniques. From the Napoleonic battlefield to the modern deep learning pipeline, it has continuously proved its usefulness.</p>
-<p>{{ “This example can be found on pg 215 <em>Pattern Recognition and Machine Learning</em> by Christopher Bishop” | fndetail: 1 }}</p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This example can be found on pg 215 <em>Pattern Recognition and Machine Learning</em> by Christopher Bishop<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
