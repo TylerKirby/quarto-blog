@@ -1,7 +1,7 @@
 ---
 title: "Papers and Talks"
 about:
-  template: jolla
+  template: solana
 ---
 ### Client Side Deep Learning Optimization with PyTorch
 
