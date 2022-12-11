@@ -1,9 +1,9 @@
 ---
 aliases:
-- /machine_learning/2021/01/20/-Basics-Bayes-ML
+- /machine_learning/2022/01/20/-Basics-Bayes-ML
 categories:
 - machine_learning
-date: '2021-01-20'
+date: '2022-01-20'
 description: Bayesian methods can offer capabilities like uncertainty estimates and
   encoding domain knowledge directly into a model. This post provides an overview
   of Bayesian methods beginning with a review of probability before showing how it
