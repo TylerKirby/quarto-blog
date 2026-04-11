@@ -8,7 +8,6 @@ A Classical Greek & Latin reader for iOS. Tap any word for its dictionary entry,
 
 - [Landing Page](alexandria/index.qmd)
 - [Privacy Policy](alexandria/privacy.qmd)
-- [Source & Issues](https://github.com/TylerKirby/alexandria/issues)
 
 ### Nalanda
 
