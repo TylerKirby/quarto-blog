@@ -1,0 +1,75 @@
+---
+title: "Alexandria"
+subtitle: "A Classical Greek & Latin Reader for iOS"
+page-layout: full
+title-block-banner: true
+css: styles.css
+---
+
+## Read the Classics, Anywhere
+
+Alexandria puts the foundational texts of the Greek and Latin literary traditions in your hands — with the tools you need to read them. Tap any word for its dictionary entry, morphological parse, and grammatical features, all computed on-device without an internet connection.
+
+Whether you are a graduate student working through Thucydides, a Latinist revisiting Ovid, or a curious reader encountering Homer for the first time, Alexandria offers a complete reading environment with 1,784 texts from over 133 authors.
+
+::: {layout-ncol=3}
+![Home](images/home.png){fig-alt="Alexandria home screen showing currently reading card, reading statistics, and navigation to library, vocabulary, and settings"}
+
+![Library](images/library.png){fig-alt="Alexandria library view showing Greek and Latin tabs, author list with work counts, and search bar"}
+
+![Reader](images/reader.png){fig-alt="Alexandria reader showing the Greek text of Aeschylus' Agamemnon with section numbers and line-by-line display"}
+:::
+
+## Features
+
+### A Complete Classical Library
+
+Alexandria includes texts from the major Perseus and CLTK corpora — epic, lyric, drama, oratory, historiography, philosophy, and more. Browse by author, genre, or period. Switch between Greek and Latin with a tap.
+
+The library spans from the earliest surviving Greek literature through the late Latin authors:
+
+- **Greek**: Homer, Hesiod, Pindar, Aeschylus, Sophocles, Euripides, Aristophanes, Herodotus, Thucydides, Xenophon, Plato, Aristotle, Demosthenes, Lysias, Plutarch, Lucian, and many others
+- **Latin**: Cicero, Virgil, Ovid, Horace, Catullus, Sallust, Livy, Tacitus, Seneca, Apuleius, Caesar, Pliny, and many others
+
+### Instant Morphological Analysis
+
+Tap any word in any text to see its full morphological parse: lemma (dictionary form), part of speech, case, number, gender, tense, mood, voice, and a short definition. Alexandria's analysis engine handles regular and irregular forms, compound verbs, contracted forms, and dialectal variants.
+
+No internet connection is required. The entire morphological engine, lexicon, and text library ship with the app.
+
+### Designed for Sustained Reading
+
+- **Adjustable font size** — a manual slider lets you set the text size that works for you
+- **Dynamic Type** — all navigation and UI text scales with your system accessibility settings
+- **Reading progress** — the app remembers where you left off in every text
+- **Bookmarks and saved passages** — mark and organize passages for later reference
+- **Dark mode** — read comfortably in low light
+- **Multiple editions** — where available, compare different editions of the same work
+
+### Vocabulary and Study Tools
+
+- **Vocabulary lists** — save words you encounter for review and study
+- **Reading lists** — curated guides through the classical canon
+- **Reading statistics** — track texts started, completed, and words saved
+
+### Offline and Private
+
+Everything happens on your device. The morphological engine, the lexicon, and the entire text library are bundled with the app. No server calls, no accounts, no tracking. iCloud sync (optional) keeps your reading progress consistent across devices.
+
+See the full [privacy policy](privacy.qmd).
+
+## What Alexandria Is Not
+
+Alexandria is a **reader** — not an editor, translator, or critical apparatus. It is worth being clear about what lies outside its scope:
+
+- **Not a translation tool.** Alexandria provides morphological analysis and short glosses to support reading in the original language. It does not produce or display full English translations.
+- **Not a critical edition.** The texts are drawn from open digital corpora (primarily Perseus and CLTK). While these are reliable standard editions, Alexandria does not include a critical apparatus, variant readings, or textual notes.
+- **Not a grammar reference.** The word lookup gives you the parse of a specific form. It does not teach inflection paradigms or syntax. It is a companion to a grammar, not a replacement for one.
+- **Not a corpus search tool.** You can browse and read texts, but Alexandria does not support cross-text searching, concordance generation, or computational text analysis.
+- **Not a social platform.** There are no accounts, no shared annotations, and no community features. Alexandria is a private reading tool.
+
+## Get Alexandria
+
+- [App Store](#) *(coming soon)*
+- [Privacy Policy](privacy.qmd)
+- [Source & Issues](https://github.com/TylerKirby/alexandria/issues)
