@@ -3,6 +3,14 @@ title: "Papers and Talks"
 about:
   template: solana
 ---
+### Latin Vocabulary and Reading Latin: Challenges and Opportunities
+
+#### Published in Transactions of the American Philological Association (TAPA), Volume 153, Number 2, Autumn 2023
+
+[Keeline, T., & Kirby, T. (2023). Latin Vocabulary and Reading Latin: Challenges and Opportunities. *Transactions of the American Philological Association*, 153(2), 531-559.](https://doi.org/10.1353/apa.2023.a913472)
+
+**Abstract**: Scholars agree that you need to know 95‒98% of the words in a text in order to understand it. Using a digital and statistical analysis of a four-million-word corpus, we quantify the challenge of reaching this threshold in classical Latin. The vocabulary distribution has a long tail: to read with fluency you'd have to learn a lot of uncommon words. Because of the nature of the extant classical Latin corpus, this is an almost impossible task today. But Latin learners shouldn't despair. Instead, we should adjust our expectations, our teaching, and our reading practices. We make suggestions for possible changes.
+
 ### Client Side Deep Learning Optimization with PyTorch
 
 #### Presented at Strange Loop 2021
