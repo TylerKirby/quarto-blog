@@ -1,0 +1,22 @@
+---
+title: "Projects"
+---
+
+### Alexandria
+
+A Classical Greek & Latin reader for iOS. Tap any word for its dictionary entry, morphological parse, and grammatical features — all computed on-device without an internet connection. Includes 1,784 texts from over 133 authors spanning the major Perseus and CLTK corpora.
+
+- [Landing Page](alexandria/index.qmd)
+- [Privacy Policy](alexandria/privacy.qmd)
+- [Source & Issues](https://github.com/TylerKirby/alexandria/issues)
+
+### Nalanda
+
+A web app for learning Classical Chinese through Buddhist literature. Combines structured lessons, spaced repetition flashcards, and an interactive Heart Sutra reader to guide you from foundational characters to reading primary texts.
+
+- Lessons introduce characters, grammar patterns, and vocabulary in phases
+- Practice uses spaced repetition (SM-2) with tracing, multiple-choice, fill-in-the-blank, and translation exercises
+- Heart Sutra Reader with Chinese-only, parallel, or interlinear mode and tap-to-lookup
+- Searchable character dictionary, grammar index, and radical browser
+
+[nalanda.jtylerkirby.com](https://nalanda.jtylerkirby.com)

@@ -7,8 +7,7 @@ website:
     right:
       - about.qmd
       - papers.qmd
-      - text: Alexandria
-        href: alexandria/index.qmd
+      - projects.qmd
       - icon: github
         href: https://github.com/TylerKirby
       - icon: linkedin
