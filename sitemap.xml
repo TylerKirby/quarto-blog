@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://TylerKirby.github.io/quarto-blog/posts/2021-01-20--Basics-Bayes-ML.html</loc>
-    <lastmod>2022-12-13T20:53:47.437Z</lastmod>
+    <loc>https://jtylerkirby.com/alexandria/privacy.html</loc>
+    <lastmod>2026-04-11T15:10:43.797Z</lastmod>
   </url>
   <url>
-    <loc>https://TylerKirby.github.io/quarto-blog/posts/2022-12-11-laplace.html</loc>
-    <lastmod>2022-12-13T20:53:47.811Z</lastmod>
+    <loc>https://jtylerkirby.com/papers.html</loc>
+    <lastmod>2026-04-11T15:10:43.797Z</lastmod>
   </url>
   <url>
-    <loc>https://TylerKirby.github.io/quarto-blog/papers.html</loc>
-    <lastmod>2022-12-13T20:53:48.082Z</lastmod>
+    <loc>https://jtylerkirby.com/about.html</loc>
+    <lastmod>2026-04-11T15:10:43.793Z</lastmod>
   </url>
   <url>
-    <loc>https://TylerKirby.github.io/quarto-blog/index.html</loc>
-    <lastmod>2022-12-13T20:53:48.343Z</lastmod>
+    <loc>https://jtylerkirby.com/posts/2022-12-11-laplace.html</loc>
+    <lastmod>2026-04-11T15:10:43.798Z</lastmod>
   </url>
   <url>
-    <loc>https://TylerKirby.github.io/quarto-blog/about.html</loc>
-    <lastmod>2022-12-13T20:53:48.584Z</lastmod>
+    <loc>https://jtylerkirby.com/posts/2021-01-20--Basics-Bayes-ML.html</loc>
+    <lastmod>2026-04-11T15:10:43.797Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jtylerkirby.com/index.html</loc>
+    <lastmod>2026-04-11T15:10:43.797Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jtylerkirby.com/alexandria/index.html</loc>
+    <lastmod>2026-04-11T15:10:43.797Z</lastmod>
   </url>
 </urlset>
