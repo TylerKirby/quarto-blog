@@ -1,0 +1,42 @@
+---
+title: "Alexandria"
+subtitle: "A Classical Greek & Latin Reader for iOS"
+page-layout: full
+title-block-banner: true
+---
+
+## Read the Classics, Anywhere
+
+Alexandria is a free iOS app for reading ancient Greek and Latin texts with built-in morphological analysis. Tap any word to see its dictionary form, part of speech, and grammatical features — no internet required.
+
+### Features
+
+- **1,784 texts** from 133+ authors spanning Homer to Apuleius
+- **Instant word lookup** — tap any word for parsing, lemma, and definition
+- **Offline morphological analysis** — works without an internet connection
+- **Dynamic Type support** — text scales with your system accessibility settings
+- **Multiple editions** — compare different editions of the same work
+- **Reading progress tracking** — pick up where you left off
+- **Bookmarks and saved passages** — save and organize what matters
+- **Vocabulary lists** — track words you're learning
+- **iCloud sync** — reading progress syncs across devices
+- **Dark mode** — comfortable reading in any light
+
+### Who It's For
+
+- Students of Classical Greek and Latin
+- Scholars and researchers working with primary texts
+- Anyone who wants to read the ancient world's literature in the original languages
+
+### Privacy
+
+Alexandria collects no personal data. All text analysis happens on-device. iCloud sync uses your Apple ID and is governed by [Apple's privacy policy](https://www.apple.com/privacy/). See the full [privacy policy](privacy.qmd) for details.
+
+### Support
+
+For bug reports and feature requests, visit the [GitHub repository](https://github.com/TylerKirby/alexandria/issues).
+
+### Links
+
+- [Privacy Policy](privacy.qmd)
+- [App Store](#) *(coming soon)*

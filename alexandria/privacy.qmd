@@ -1,0 +1,61 @@
+---
+title: "Alexandria — Privacy Policy"
+date: 2026-04-11
+page-layout: article
+---
+
+*Last updated: April 11, 2026*
+
+## Overview
+
+Alexandria is a classical Greek and Latin reader for iOS developed by J. Tyler Kirby. Your privacy is important. This policy explains what data Alexandria collects and how it is used.
+
+## Data Collection
+
+**Alexandria does not collect, store, or transmit any personal data.**
+
+- No analytics or tracking SDKs are included
+- No advertising frameworks are used
+- No user accounts are required
+- No data is sent to third-party services
+
+## On-Device Processing
+
+All morphological analysis, word lookup, and text rendering happens entirely on your device. No text you read or words you look up are transmitted to any server.
+
+## iCloud Sync
+
+If you have iCloud enabled on your device, Alexandria uses Apple's CloudKit to sync reading progress and bookmarks across your devices. This data is:
+
+- Stored in your private iCloud container
+- Governed by [Apple's privacy policy](https://www.apple.com/privacy/)
+- Not accessible to the developer or any third party
+- Deletable by removing the app or disabling iCloud for Alexandria in Settings
+
+## Data Stored on Device
+
+Alexandria stores the following data locally on your device:
+
+- **Reading progress** — which texts you've read and your position in each
+- **Bookmarks and saved passages** — passages you choose to save
+- **Vocabulary lists** — words you mark for study
+- **Reading settings** — font size, theme preferences
+- **Bug reports** — if you choose to submit one via the in-app reporter, the report is saved locally
+
+None of this data leaves your device except through iCloud sync (if enabled).
+
+## Children's Privacy
+
+Alexandria does not knowingly collect any data from children. The app contains no objectionable content and is rated 4+.
+
+## Changes to This Policy
+
+If this policy changes, the updated version will be posted at this URL. The "last updated" date at the top will be revised accordingly.
+
+## Contact
+
+For questions about this privacy policy, contact:
+
+**J. Tyler Kirby**
+Email: tyler.kirby9398 [at] gmail.com
+GitHub: [TylerKirby](https://github.com/TylerKirby)
