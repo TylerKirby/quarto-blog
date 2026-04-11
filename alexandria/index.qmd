@@ -3,6 +3,7 @@ title: "Alexandria"
 subtitle: "A Classical Greek & Latin Reader for iOS"
 page-layout: full
 title-block-banner: true
+css: styles.css
 ---
 
 ## Read the Classics, Anywhere
@@ -11,10 +12,12 @@ Alexandria puts the foundational texts of the Greek and Latin literary tradition
 
 Whether you are a graduate student working through Thucydides, a Latinist revisiting Ovid, or a curious reader encountering Homer for the first time, Alexandria offers a complete reading environment with 1,784 texts from over 133 authors.
 
-::: {layout-ncol=2}
-![Home screen with reading progress and library access](images/home.png){fig-alt="Alexandria home screen showing currently reading card, reading statistics, and navigation to library, vocabulary, and settings"}
+::: {layout-ncol=3}
+![Home](images/home.png){fig-alt="Alexandria home screen showing currently reading card, reading statistics, and navigation to library, vocabulary, and settings"}
 
-![Library with searchable author index and language filters](images/library.png){fig-alt="Alexandria library view showing Greek and Latin tabs, author list with work counts, and search bar"}
+![Library](images/library.png){fig-alt="Alexandria library view showing Greek and Latin tabs, author list with work counts, and search bar"}
+
+![Reader](images/reader.png){fig-alt="Alexandria reader showing the Greek text of Aeschylus' Agamemnon with section numbers and line-by-line display"}
 :::
 
 ## Features
@@ -32,11 +35,7 @@ The library spans from the earliest surviving Greek literature through the late 
 
 Tap any word in any text to see its full morphological parse: lemma (dictionary form), part of speech, case, number, gender, tense, mood, voice, and a short definition. Alexandria's analysis engine handles regular and irregular forms, compound verbs, contracted forms, and dialectal variants.
 
-::: {layout-ncol=2}
-![Reading Aeschylus' Agamemnon in the original Greek](images/reader.png){fig-alt="Alexandria reader showing the Greek text of Aeschylus' Agamemnon with section numbers and line-by-line display"}
-
-![Word lookup showing lemma, definition, and grammatical features](images/word-lookup.png){fig-alt="Alexandria word lookup popover showing the analysis of a Greek word with its lemma, English definition, and morphological features"}
-:::
+No internet connection is required. The entire morphological engine, lexicon, and text library ship with the app.
 
 ### Designed for Sustained Reading
 
@@ -45,7 +44,7 @@ Tap any word in any text to see its full morphological parse: lemma (dictionary 
 - **Reading progress** — the app remembers where you left off in every text
 - **Bookmarks and saved passages** — mark and organize passages for later reference
 - **Dark mode** — read comfortably in low light
-- **Multiple editions** — where available, compare different editions of the same work side by side
+- **Multiple editions** — where available, compare different editions of the same work
 
 ### Vocabulary and Study Tools
 
@@ -61,7 +60,7 @@ See the full [privacy policy](privacy.qmd).
 
 ## What Alexandria Is Not
 
-Alexandria is a **reader**, not an editor, translator, or critical apparatus. It is worth being clear about what lies outside its scope:
+Alexandria is a **reader** — not an editor, translator, or critical apparatus. It is worth being clear about what lies outside its scope:
 
 - **Not a translation tool.** Alexandria provides morphological analysis and short glosses to support reading in the original language. It does not produce or display full English translations.
 - **Not a critical edition.** The texts are drawn from open digital corpora (primarily Perseus and CLTK). While these are reliable standard editions, Alexandria does not include a critical apparatus, variant readings, or textual notes.

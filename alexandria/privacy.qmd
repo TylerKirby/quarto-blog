@@ -2,6 +2,7 @@
 title: "Alexandria — Privacy Policy"
 date: 2026-04-11
 page-layout: article
+css: styles.css
 ---
 
 *Last updated: April 11, 2026*
