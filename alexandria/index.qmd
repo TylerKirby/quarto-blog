@@ -7,36 +7,70 @@ title-block-banner: true
 
 ## Read the Classics, Anywhere
 
-Alexandria is a free iOS app for reading ancient Greek and Latin texts with built-in morphological analysis. Tap any word to see its dictionary form, part of speech, and grammatical features — no internet required.
+Alexandria puts the foundational texts of the Greek and Latin literary traditions in your hands — with the tools you need to read them. Tap any word for its dictionary entry, morphological parse, and grammatical features, all computed on-device without an internet connection.
 
-### Features
+Whether you are a graduate student working through Thucydides, a Latinist revisiting Ovid, or a curious reader encountering Homer for the first time, Alexandria offers a complete reading environment with 1,784 texts from over 133 authors.
 
-- **1,784 texts** from 133+ authors spanning Homer to Apuleius
-- **Instant word lookup** — tap any word for parsing, lemma, and definition
-- **Offline morphological analysis** — works without an internet connection
-- **Dynamic Type support** — text scales with your system accessibility settings
-- **Multiple editions** — compare different editions of the same work
-- **Reading progress tracking** — pick up where you left off
-- **Bookmarks and saved passages** — save and organize what matters
-- **Vocabulary lists** — track words you're learning
-- **iCloud sync** — reading progress syncs across devices
-- **Dark mode** — comfortable reading in any light
+::: {layout-ncol=2}
+![Home screen with reading progress and library access](images/home.png){fig-alt="Alexandria home screen showing currently reading card, reading statistics, and navigation to library, vocabulary, and settings"}
 
-### Who It's For
+![Library with searchable author index and language filters](images/library.png){fig-alt="Alexandria library view showing Greek and Latin tabs, author list with work counts, and search bar"}
+:::
 
-- Students of Classical Greek and Latin
-- Scholars and researchers working with primary texts
-- Anyone who wants to read the ancient world's literature in the original languages
+## Features
 
-### Privacy
+### A Complete Classical Library
 
-Alexandria collects no personal data. All text analysis happens on-device. iCloud sync uses your Apple ID and is governed by [Apple's privacy policy](https://www.apple.com/privacy/). See the full [privacy policy](privacy.qmd) for details.
+Alexandria includes texts from the major Perseus and CLTK corpora — epic, lyric, drama, oratory, historiography, philosophy, and more. Browse by author, genre, or period. Switch between Greek and Latin with a tap.
 
-### Support
+The library spans from the earliest surviving Greek literature through the late Latin authors:
 
-For bug reports and feature requests, visit the [GitHub repository](https://github.com/TylerKirby/alexandria/issues).
+- **Greek**: Homer, Hesiod, Pindar, Aeschylus, Sophocles, Euripides, Aristophanes, Herodotus, Thucydides, Xenophon, Plato, Aristotle, Demosthenes, Lysias, Plutarch, Lucian, and many others
+- **Latin**: Cicero, Virgil, Ovid, Horace, Catullus, Sallust, Livy, Tacitus, Seneca, Apuleius, Caesar, Pliny, and many others
 
-### Links
+### Instant Morphological Analysis
 
-- [Privacy Policy](privacy.qmd)
+Tap any word in any text to see its full morphological parse: lemma (dictionary form), part of speech, case, number, gender, tense, mood, voice, and a short definition. Alexandria's analysis engine handles regular and irregular forms, compound verbs, contracted forms, and dialectal variants.
+
+::: {layout-ncol=2}
+![Reading Aeschylus' Agamemnon in the original Greek](images/reader.png){fig-alt="Alexandria reader showing the Greek text of Aeschylus' Agamemnon with section numbers and line-by-line display"}
+
+![Word lookup showing lemma, definition, and grammatical features](images/word-lookup.png){fig-alt="Alexandria word lookup popover showing the analysis of a Greek word with its lemma, English definition, and morphological features"}
+:::
+
+### Designed for Sustained Reading
+
+- **Adjustable font size** — a manual slider lets you set the text size that works for you
+- **Dynamic Type** — all navigation and UI text scales with your system accessibility settings
+- **Reading progress** — the app remembers where you left off in every text
+- **Bookmarks and saved passages** — mark and organize passages for later reference
+- **Dark mode** — read comfortably in low light
+- **Multiple editions** — where available, compare different editions of the same work side by side
+
+### Vocabulary and Study Tools
+
+- **Vocabulary lists** — save words you encounter for review and study
+- **Reading lists** — curated guides through the classical canon
+- **Reading statistics** — track texts started, completed, and words saved
+
+### Offline and Private
+
+Everything happens on your device. The morphological engine, the lexicon, and the entire text library are bundled with the app. No server calls, no accounts, no tracking. iCloud sync (optional) keeps your reading progress consistent across devices.
+
+See the full [privacy policy](privacy.qmd).
+
+## What Alexandria Is Not
+
+Alexandria is a **reader**, not an editor, translator, or critical apparatus. It is worth being clear about what lies outside its scope:
+
+- **Not a translation tool.** Alexandria provides morphological analysis and short glosses to support reading in the original language. It does not produce or display full English translations.
+- **Not a critical edition.** The texts are drawn from open digital corpora (primarily Perseus and CLTK). While these are reliable standard editions, Alexandria does not include a critical apparatus, variant readings, or textual notes.
+- **Not a grammar reference.** The word lookup gives you the parse of a specific form. It does not teach inflection paradigms or syntax. It is a companion to a grammar, not a replacement for one.
+- **Not a corpus search tool.** You can browse and read texts, but Alexandria does not support cross-text searching, concordance generation, or computational text analysis.
+- **Not a social platform.** There are no accounts, no shared annotations, and no community features. Alexandria is a private reading tool.
+
+## Get Alexandria
+
 - [App Store](#) *(coming soon)*
+- [Privacy Policy](privacy.qmd)
+- [Source & Issues](https://github.com/TylerKirby/alexandria/issues)
