@@ -26,7 +26,7 @@ All morphological analysis, word lookup, and text rendering happens entirely on 
 
 ## Beta Signup (This Website)
 
-The beta signup form on this website is the one place Alexandria collects information, and it is part of the website — not the app. When you request TestFlight access, your **name**, **email**, and optional **institution** are sent via [Web3Forms](https://web3forms.com) to the developer's inbox and used solely to send you an Apple TestFlight invitation. These details are not sold, shared, or used for any other purpose. Email tyler.kirby9398 [at] gmail.com to have a request deleted. The app itself, once installed, still collects nothing.
+The beta signup form on this website is the one place Alexandria collects information, and it belongs to the website, not the app. When you request TestFlight access, your **name**, **email**, and optional **institution** are sent via [Web3Forms](https://web3forms.com) to the developer's inbox and used solely to send you an Apple TestFlight invitation. These details are not sold, shared, or used for any other purpose. Email tyler.kirby9398 [at] gmail.com to have a request deleted. The app itself, once installed, still collects nothing.
 
 ## iCloud Sync
 

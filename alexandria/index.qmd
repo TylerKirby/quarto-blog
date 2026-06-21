@@ -6,11 +6,11 @@ title-block-banner: true
 css: styles.css
 ---
 
-## Read the Classics, Anywhere
+## Read Greek and Latin
 
-Alexandria puts the foundational texts of the Greek and Latin literary traditions in your hands — with the tools you need to actually read them. Tap any word for its dictionary entry, morphological parse, and grammatical features, all computed on-device without an internet connection.
+Alexandria is a Greek and Latin reader for iPhone and iPad. Tap any word to see its dictionary entry, its morphological parse, and its grammatical features. All of it runs on the device, with no internet connection.
 
-Whether you are a graduate student working through Thucydides, a Latinist revisiting Ovid, or a curious reader meeting Homer for the first time, Alexandria is a complete reading environment: **more than 4,200 texts** by over **500 authors**, spanning **2,600+ works** — with 2,100+ in Greek and 2,100+ in Latin.
+The library holds more than 4,200 texts by over 500 authors, split about evenly between Greek and Latin, drawn from the Perseus and CLTK corpora. The same reading tools work everywhere, whether it's your first page of Homer or your tenth pass through Thucydides.
 
 ::: {layout-ncol=2}
 ![Home](images/home.png){fig-alt="Alexandria home screen with a currently-reading card for Homer's Iliad, a daily reading streak, and curated reading lists"}
@@ -24,65 +24,63 @@ Whether you are a graduate student working through Thucydides, a Latinist revisi
 
 ## Features
 
-### A Complete Classical Library
+### A Classical Library
 
-Alexandria includes texts from the major Perseus and CLTK corpora — epic, lyric, drama, oratory, historiography, philosophy, and more. Browse by author, genre, or period, switch between Greek and Latin with a tap, and expand any author to read a short biography with their dates, era, and notable works. Where a work survives in more than one edition, you can compare them side by side, and **40 curated reading lists** offer guided paths through the canon.
+The texts come from the Perseus and CLTK corpora: epic, lyric, drama, oratory, history, philosophy, and more. Browse by author, genre, or period, and switch between Greek and Latin with a tap. Each author has a short biography with their dates and major works. When a work survives in more than one edition, you can compare them, and 40 curated reading lists suggest where to start.
 
-The library spans from the earliest surviving Greek literature through the late Latin authors:
+The library runs from the earliest Greek literature through the late Latin authors:
 
-- **Greek**: Homer, Hesiod, Pindar, Aeschylus, Sophocles, Euripides, Aristophanes, Herodotus, Thucydides, Xenophon, Plato, Aristotle, Demosthenes, Lysias, Plutarch, Lucian, and many others
-- **Latin**: Cicero, Virgil, Ovid, Horace, Catullus, Sallust, Livy, Tacitus, Seneca, Apuleius, Caesar, Pliny, and many others
+- **Greek**: Homer, Hesiod, Pindar, Aeschylus, Sophocles, Euripides, Aristophanes, Herodotus, Thucydides, Xenophon, Plato, Aristotle, Demosthenes, Lysias, Plutarch, Lucian, and many more
+- **Latin**: Cicero, Virgil, Ovid, Horace, Catullus, Sallust, Livy, Tacitus, Seneca, Apuleius, Caesar, Pliny, and many more
 
-### Instant Morphological Analysis
+### Morphological Analysis
 
-Tap any word in any text to see its full morphological parse: lemma (dictionary form), part of speech, case, number, gender, tense, mood, and voice. Alexandria's analysis engine draws on more than 270,000 stems and handles regular and irregular forms, compound verbs, contracted forms, and dialectal variants.
-
-No internet connection is required. The entire morphological engine, the dictionaries, and the text library all ship inside the app.
+Tap a word and Alexandria parses it: lemma, part of speech, case, number, gender, tense, mood, voice. The engine knows more than 270,000 stems and handles irregular forms, compound verbs, contractions, and dialect. It works for every text, offline, with nothing to download.
 
 ### Choose Your Dictionary
 
-A single gloss is rarely enough. Alexandria carries several scholarly dictionaries and lets you switch between them for any word, right in the lookup popover:
+One gloss often isn't enough. Alexandria ships several dictionaries and lets you switch between them for any word, right in the lookup:
 
 - **Latin**: Lewis & Short, Elementary Lewis, and Whitaker's Words
-- **Greek**: the full Liddell–Scott–Jones (LSJ) and the Middle Liddell
+- **Greek**: the full Liddell-Scott-Jones (LSJ) and the Middle Liddell
 - **Both languages**: DCC Core Vocabulary, frequency-ranked glosses for the most common words
 
-Reach for a concise gloss while reading, then open the comprehensive entry when you want the full range of senses — without ever leaving the page.
+Start with a short gloss while you read, then open the full entry when you want every sense.
 
 ### Vocabulary & Study
 
-- **Spaced-repetition flashcards** — save words as you read and review them with an SRS scheduler, in multiple-choice, typed-answer, and classic card formats
-- **Streaks and achievements** — small nudges to keep a daily practice habit
-- **Reading statistics** — track texts started, texts completed, and words saved
+- **Spaced-repetition flashcards.** Save words as you read and review them on an SRS schedule, as multiple-choice, typed-answer, or classic cards.
+- **Streaks and achievements.** Small nudges to keep the habit going.
+- **Reading statistics.** Texts started, texts finished, words saved.
 
-### Designed for Sustained Reading
+### Built for Long Reading Sessions
 
-- **Adjustable font size** — a manual slider lets you set the text size that works for you
-- **Dynamic Type** — all navigation and UI text scales with your system accessibility settings
-- **Reading progress** — the app remembers where you left off in every text
-- **Bookmarks and saved passages** — mark and organize passages for later reference
-- **Dark mode** — read comfortably in low light
-- **Built for accessibility** — full VoiceOver support, Reduce Motion, and a Differentiate-Without-Color mode that adds non-color cues to grammatical information
+- **Adjustable font size.** Set the text size with a slider.
+- **Dynamic Type.** UI text scales with your system accessibility settings.
+- **Reading progress.** The app remembers where you stopped in every text.
+- **Bookmarks and saved passages.** Keep the lines you want to return to.
+- **Dark mode.** Comfortable reading in low light.
+- **Accessibility.** Full VoiceOver support, Reduce Motion, and a Differentiate-Without-Color mode that adds non-color cues to grammatical information.
 
 ### Offline & Private
 
-Everything happens on your device. The morphological engine, the dictionaries, and the entire text library are bundled with the app. No server calls, no accounts, no tracking. Optional iCloud sync keeps your reading progress and saved words consistent across your devices, in your own private iCloud container.
+Everything stays on your device. The engine, the dictionaries, and the full text library are bundled in the app. No server calls, no accounts, no tracking. If you use iCloud, your reading progress and saved words sync across your devices through your own private iCloud container.
 
 See the full [privacy policy](privacy.qmd).
 
 ## What Alexandria Is Not
 
-Alexandria is a **reader** — not an editor, translator, or critical apparatus. It is worth being clear about what lies outside its scope:
+Alexandria is a reader, not an editor, translator, or critical apparatus. A few things it deliberately leaves out:
 
-- **Not a translation tool.** Alexandria provides morphological analysis and short glosses to support reading in the original language. It does not produce or display full English translations.
-- **Not a critical edition.** The texts are drawn from open digital corpora (primarily Perseus and CLTK). While these are reliable standard editions, Alexandria does not include a critical apparatus, variant readings, or textual notes.
-- **Not a grammar reference.** The word lookup gives you the parse of a specific form. It does not teach inflection paradigms or syntax. It is a companion to a grammar, not a replacement for one.
-- **Not a corpus search tool.** You can browse and read texts, but Alexandria does not support cross-text searching, concordance generation, or computational text analysis.
-- **Not a social platform.** There are no accounts, no shared annotations, and no community features. Alexandria is a private reading tool.
+- **Not a translation tool.** It gives you morphological analysis and short glosses to support reading in the original. It does not produce full English translations.
+- **Not a critical edition.** The texts come from open digital corpora, mainly Perseus and CLTK. These are reliable standard editions, but there is no critical apparatus, no variant readings, and no textual notes.
+- **Not a grammar reference.** The lookup parses a specific form. It does not teach paradigms or syntax. It works alongside a grammar, not in place of one.
+- **Not a corpus search tool.** You can browse and read, but there is no cross-text search, concordance, or text analysis.
+- **Not a social platform.** No accounts, no shared annotations, no community features. It is a private reading tool.
 
 ## Get Alexandria
 
-**Alexandria is now in beta on TestFlight.** Request access below and you'll receive an Apple TestFlight invitation by email once your spot is approved — the invite includes everything you need to install the app.
+Alexandria is in beta on TestFlight. Request access below and you'll get an Apple TestFlight invitation by email once you're approved, with everything you need to install it.
 
 <form id="beta-form" class="beta-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="12c4d056-de64-4f16-be69-c47cf24c5692">
@@ -102,9 +100,9 @@ Alexandria is a **reader** — not an editor, translator, or critical apparatus.
          placeholder="University, school, or independent" autocomplete="organization">
 
   <button class="beta-button" type="submit">Request Beta Access</button>
-  <p class="beta-note">Your name and email are used only to send you a TestFlight invite — nothing else.</p>
+  <p class="beta-note">Your name and email are only used to send you a TestFlight invite. Nothing else.</p>
 </form>
-<div id="beta-success" class="beta-success" hidden>✓ You're on the list — I'll send you a TestFlight invite soon.</div>
+<div id="beta-success" class="beta-success" hidden>✓ You're on the list. I'll send a TestFlight invite soon.</div>
 
 <script>
 (function () {
@@ -125,7 +123,7 @@ Alexandria is a **reader** — not an editor, translator, or critical apparatus.
   });
   function reset(btn) {
     btn.disabled = false; btn.textContent = 'Request Beta Access';
-    alert('Something went wrong — please email tyler.kirby9398 [at] gmail.com');
+    alert('Something went wrong. Please email tyler.kirby9398 [at] gmail.com');
   }
 })();
 </script>
