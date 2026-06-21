@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jtylerkirby.com/alexandria/privacy.html</loc>
-    <lastmod>2026-04-11T15:35:14.935Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jtylerkirby.com/papers.html</loc>
-    <lastmod>2026-04-11T15:35:14.935Z</lastmod>
+    <loc>https://jtylerkirby.com/index.html</loc>
+    <lastmod>2026-06-21T14:43:45.899Z</lastmod>
   </url>
   <url>
     <loc>https://jtylerkirby.com/about.html</loc>
-    <lastmod>2026-04-11T15:35:14.932Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jtylerkirby.com/posts/2022-12-11-laplace.html</loc>
-    <lastmod>2026-04-11T15:35:14.936Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jtylerkirby.com/projects.html</loc>
-    <lastmod>2026-04-11T15:35:14.938Z</lastmod>
+    <lastmod>2026-06-21T14:43:45.894Z</lastmod>
   </url>
   <url>
     <loc>https://jtylerkirby.com/posts/2021-01-20--Basics-Bayes-ML.html</loc>
-    <lastmod>2026-04-11T15:35:14.935Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jtylerkirby.com/index.html</loc>
-    <lastmod>2026-04-11T15:35:14.935Z</lastmod>
+    <lastmod>2026-06-21T14:43:45.899Z</lastmod>
   </url>
   <url>
     <loc>https://jtylerkirby.com/alexandria/index.html</loc>
-    <lastmod>2026-04-11T15:35:14.935Z</lastmod>
+    <lastmod>2026-06-21T14:43:45.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jtylerkirby.com/alexandria/privacy.html</loc>
+    <lastmod>2026-06-21T14:43:45.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jtylerkirby.com/projects.html</loc>
+    <lastmod>2026-06-21T14:43:45.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jtylerkirby.com/posts/2022-12-11-laplace.html</loc>
+    <lastmod>2026-06-21T14:43:45.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jtylerkirby.com/papers.html</loc>
+    <lastmod>2026-06-21T14:43:45.899Z</lastmod>
   </url>
 </urlset>
