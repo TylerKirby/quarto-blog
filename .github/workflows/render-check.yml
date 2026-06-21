@@ -1,0 +1,24 @@
+name: Render check
+
+# Builds the Quarto site on pull requests so a broken render is caught before
+# merge. The existing publish.yml handles deploy on push to main; this provides
+# the pre-merge "green" gate.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site (build only)
+        run: quarto render

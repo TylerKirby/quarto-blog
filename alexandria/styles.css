@@ -108,8 +108,9 @@ li strong {
   border: 1px solid rgba(196, 163, 90, 0.15);
 }
 
-/* The "What Alexandria Is Not" section — subtle distinction */
-.level2:last-of-type {
+/* The "What Alexandria Is Not" section — subtle distinction. Anchored by id
+   (not :last-of-type) since the Get Alexandria form card now follows it. */
+#what-alexandria-is-not {
   background: #F5EDE4;
   border: 1px solid rgba(196, 163, 90, 0.25);
 }
@@ -154,5 +155,72 @@ figcaption {
 /* Footer link area */
 .level2:nth-last-of-type(1) a,
 .level2:nth-last-of-type(2) a {
+  font-weight: 500;
+}
+
+/* ---- Beta signup form ---- */
+.beta-form { max-width: 32rem; margin: 1rem 0 0.5rem; }
+
+.beta-label {
+  display: block;
+  font-weight: 600;
+  color: #5a3d1e;
+  margin: 0.9rem 0 0.3rem;
+}
+
+.beta-optional {
+  font-weight: 400;
+  font-style: italic;
+  color: #8B7355;
+}
+
+.beta-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #3D2914;
+  background: #FFFDF9;
+  border: 1px solid #C4A35A;
+  border-radius: 8px;
+}
+
+.beta-input:focus {
+  outline: none;
+  border-color: #8B7355;
+  box-shadow: 0 0 0 3px rgba(196, 163, 90, 0.25);
+}
+
+.beta-button {
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.6rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #FAF6F1;
+  background: linear-gradient(135deg, #5a3d1e, #3D2914);
+  border: 1px solid #C4A35A;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.beta-button:hover { filter: brightness(1.15); }
+.beta-button:disabled { opacity: 0.6; cursor: default; }
+
+.beta-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #8B7355;
+  margin-top: 0.6rem;
+}
+
+.beta-success {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background: #EDF5E4;
+  border: 1px solid #9BB57A;
+  border-radius: 8px;
+  color: #3D2914;
   font-weight: 500;
 }

@@ -8,23 +8,25 @@ css: styles.css
 
 ## Read the Classics, Anywhere
 
-Alexandria puts the foundational texts of the Greek and Latin literary traditions in your hands — with the tools you need to read them. Tap any word for its dictionary entry, morphological parse, and grammatical features, all computed on-device without an internet connection.
+Alexandria puts the foundational texts of the Greek and Latin literary traditions in your hands — with the tools you need to actually read them. Tap any word for its dictionary entry, morphological parse, and grammatical features, all computed on-device without an internet connection.
 
-Whether you are a graduate student working through Thucydides, a Latinist revisiting Ovid, or a curious reader encountering Homer for the first time, Alexandria offers a complete reading environment with 1,784 texts from over 133 authors.
+Whether you are a graduate student working through Thucydides, a Latinist revisiting Ovid, or a curious reader meeting Homer for the first time, Alexandria is a complete reading environment: **more than 4,200 texts** by over **500 authors**, spanning **2,600+ works** — with 2,100+ in Greek and 2,100+ in Latin.
 
-::: {layout-ncol=3}
-![Home](images/home.png){fig-alt="Alexandria home screen showing currently reading card, reading statistics, and navigation to library, vocabulary, and settings"}
+::: {layout-ncol=2}
+![Home](images/home.png){fig-alt="Alexandria home screen with a currently-reading card for Homer's Iliad, a daily reading streak, and curated reading lists"}
 
-![Library](images/library.png){fig-alt="Alexandria library view showing Greek and Latin tabs, author list with work counts, and search bar"}
+![Reader](images/reader.png){fig-alt="Alexandria reader with a tapped Greek word showing its morphological parse and a dictionary entry, with a Middle Liddell / LSJ dictionary picker"}
 
-![Reader](images/reader.png){fig-alt="Alexandria reader showing the Greek text of Aeschylus' Agamemnon with section numbers and line-by-line display"}
+![Library](images/library.png){fig-alt="Alexandria library showing the Greek and Latin tabs with text counts and an author list with per-work counts"}
+
+![Vocabulary](images/practice.png){fig-alt="Alexandria's saved vocabulary list showing Greek words with their parses and glosses, with a Study button to begin spaced-repetition review"}
 :::
 
 ## Features
 
 ### A Complete Classical Library
 
-Alexandria includes texts from the major Perseus and CLTK corpora — epic, lyric, drama, oratory, historiography, philosophy, and more. Browse by author, genre, or period. Switch between Greek and Latin with a tap.
+Alexandria includes texts from the major Perseus and CLTK corpora — epic, lyric, drama, oratory, historiography, philosophy, and more. Browse by author, genre, or period, switch between Greek and Latin with a tap, and expand any author to read a short biography with their dates, era, and notable works. Where a work survives in more than one edition, you can compare them side by side, and **40 curated reading lists** offer guided paths through the canon.
 
 The library spans from the earliest surviving Greek literature through the late Latin authors:
 
@@ -33,9 +35,25 @@ The library spans from the earliest surviving Greek literature through the late 
 
 ### Instant Morphological Analysis
 
-Tap any word in any text to see its full morphological parse: lemma (dictionary form), part of speech, case, number, gender, tense, mood, voice, and a short definition. Alexandria's analysis engine handles regular and irregular forms, compound verbs, contracted forms, and dialectal variants.
+Tap any word in any text to see its full morphological parse: lemma (dictionary form), part of speech, case, number, gender, tense, mood, and voice. Alexandria's analysis engine draws on more than 270,000 stems and handles regular and irregular forms, compound verbs, contracted forms, and dialectal variants.
 
-No internet connection is required. The entire morphological engine, lexicon, and text library ship with the app.
+No internet connection is required. The entire morphological engine, the dictionaries, and the text library all ship inside the app.
+
+### Choose Your Dictionary
+
+A single gloss is rarely enough. Alexandria carries several scholarly dictionaries and lets you switch between them for any word, right in the lookup popover:
+
+- **Latin**: Lewis & Short, Elementary Lewis, and Whitaker's Words
+- **Greek**: the full Liddell–Scott–Jones (LSJ) and the Middle Liddell
+- **Both languages**: DCC Core Vocabulary, frequency-ranked glosses for the most common words
+
+Reach for a concise gloss while reading, then open the comprehensive entry when you want the full range of senses — without ever leaving the page.
+
+### Vocabulary & Study
+
+- **Spaced-repetition flashcards** — save words as you read and review them with an SRS scheduler, in multiple-choice, typed-answer, and classic card formats
+- **Streaks and achievements** — small nudges to keep a daily practice habit
+- **Reading statistics** — track texts started, texts completed, and words saved
 
 ### Designed for Sustained Reading
 
@@ -44,17 +62,11 @@ No internet connection is required. The entire morphological engine, lexicon, an
 - **Reading progress** — the app remembers where you left off in every text
 - **Bookmarks and saved passages** — mark and organize passages for later reference
 - **Dark mode** — read comfortably in low light
-- **Multiple editions** — where available, compare different editions of the same work
+- **Built for accessibility** — full VoiceOver support, Reduce Motion, and a Differentiate-Without-Color mode that adds non-color cues to grammatical information
 
-### Vocabulary and Study Tools
+### Offline & Private
 
-- **Vocabulary lists** — save words you encounter for review and study
-- **Reading lists** — curated guides through the classical canon
-- **Reading statistics** — track texts started, completed, and words saved
-
-### Offline and Private
-
-Everything happens on your device. The morphological engine, the lexicon, and the entire text library are bundled with the app. No server calls, no accounts, no tracking. iCloud sync (optional) keeps your reading progress consistent across devices.
+Everything happens on your device. The morphological engine, the dictionaries, and the entire text library are bundled with the app. No server calls, no accounts, no tracking. Optional iCloud sync keeps your reading progress and saved words consistent across your devices, in your own private iCloud container.
 
 See the full [privacy policy](privacy.qmd).
 
@@ -70,6 +82,53 @@ Alexandria is a **reader** — not an editor, translator, or critical apparatus.
 
 ## Get Alexandria
 
-- [App Store](#) *(coming soon)*
+**Alexandria is now in beta on TestFlight.** Request access below and you'll receive an Apple TestFlight invitation by email once your spot is approved — the invite includes everything you need to install the app.
+
+<form id="beta-form" class="beta-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="12c4d056-de64-4f16-be69-c47cf24c5692">
+  <input type="hidden" name="subject" value="New Alexandria beta request">
+  <input type="hidden" name="from_name" value="Alexandria Beta Signup">
+  <input type="hidden" name="redirect" value="https://jtylerkirby.com/alexandria/">
+  <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+
+  <label class="beta-label" for="beta-name">Name</label>
+  <input class="beta-input" id="beta-name" type="text" name="name" required autocomplete="name">
+
+  <label class="beta-label" for="beta-email">Email</label>
+  <input class="beta-input" id="beta-email" type="email" name="email" required autocomplete="email">
+
+  <label class="beta-label" for="beta-institution">Institution <span class="beta-optional">(optional)</span></label>
+  <input class="beta-input" id="beta-institution" type="text" name="institution"
+         placeholder="University, school, or independent" autocomplete="organization">
+
+  <button class="beta-button" type="submit">Request Beta Access</button>
+  <p class="beta-note">Your name and email are used only to send you a TestFlight invite — nothing else.</p>
+</form>
+<div id="beta-success" class="beta-success" hidden>✓ You're on the list — I'll send you a TestFlight invite soon.</div>
+
+<script>
+(function () {
+  var form = document.getElementById('beta-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('.beta-button');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form)
+    }).then(function (r) { return r.json(); }).then(function (json) {
+      if (json.success) {
+        form.hidden = true;
+        document.getElementById('beta-success').hidden = false;
+      } else { reset(btn); }
+    }).catch(function () { reset(btn); });
+  });
+  function reset(btn) {
+    btn.disabled = false; btn.textContent = 'Request Beta Access';
+    alert('Something went wrong — please email tyler.kirby9398 [at] gmail.com');
+  }
+})();
+</script>
+
 - [Privacy Policy](privacy.qmd)
 - [Source & Issues](https://github.com/TylerKirby/alexandria/issues)

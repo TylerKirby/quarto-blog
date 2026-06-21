@@ -4,7 +4,7 @@ title: "Projects"
 
 ### Alexandria
 
-A Classical Greek & Latin reader for iOS. Tap any word for its dictionary entry, morphological parse, and grammatical features — all computed on-device without an internet connection. Includes 1,784 texts from over 133 authors spanning the major Perseus and CLTK corpora.
+A Classical Greek & Latin reader for iOS. Tap any word for its dictionary entry, morphological parse, and grammatical features — all computed on-device without an internet connection. Includes more than 4,200 texts by over 500 authors spanning the major Perseus and CLTK corpora, with per-word dictionaries, spaced-repetition flashcards, and on-device morphology.
 
 - [Landing Page](alexandria/index.qmd)
 - [Privacy Policy](alexandria/privacy.qmd)
