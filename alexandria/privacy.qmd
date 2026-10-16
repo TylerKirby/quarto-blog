@@ -1,66 +1,116 @@
 ---
 title: "Alexandria — Privacy Policy"
-date: 2026-06-21
+date: 2026-10-16
 page-layout: article
 css: styles.css
 ---
 
-*Last updated: June 21, 2026*
+*Last updated: October 16, 2026*
 
-## Overview
+Alexandria is a Greek and Latin reader for iPhone and iPad, developed by
+J. Tyler Kirby. Reading, dictionary lookup, and grammatical analysis run on
+your device. You do not need an Alexandria account to use the app.
 
-Alexandria is a classical Greek and Latin reader for iOS developed by J. Tyler Kirby. Your privacy is important. This policy explains what data Alexandria collects and how it is used.
+## Your reading and study data
 
-## Data Collection
+Alexandria saves data on your device so you can continue reading and studying.
+This includes:
 
-**Alexandria does not collect, store, or transmit any personal data.**
+- Reading positions, completion status, reading history, and statistics.
+- Vocabulary, definitions, notes, example sentences, and saved passages.
+- Practice cards, review schedules, results, mastery, and achievements.
+- Reading-list selections, bookmarked lists, and personal collections.
+- Words you flag for review, including the word, analysis, issue category,
+  source text, and surrounding sentence.
 
-- No analytics or tracking SDKs are included
-- No advertising frameworks are used
-- No user accounts are required
-- No data is sent to third-party services
+Display and reading preferences, such as theme and font size, are also stored
+on your device. The app has no advertising or third-party analytics SDKs.
 
-## On-Device Processing
+## Optional iCloud sync
 
-All morphological analysis, word lookup, and text rendering happens entirely on your device. No text you read or words you look up are transmitted to any server.
+When iCloud sync is enabled, Alexandria uses Apple's CloudKit to store the
+reading and study records listed above in your private iCloud database and
+sync them between your devices. This includes saved words, notes, and passage
+text, not just positions and bookmarks. The app does not send a word-lookup
+request to a developer-operated analysis server.
 
-## Beta Signup (This Website)
+Sync uses your Apple Account and an internet connection. You can change the
+sync preference in Alexandria's Settings; restart the app to apply that
+change. Turning sync off stops the app from syncing after restart. It is not
+a request to erase existing iCloud records.
 
-The beta signup form on this website is the one place Alexandria collects information, and it belongs to the website, not the app. When you request TestFlight access, your **name**, **email**, and optional **institution** are sent via [Web3Forms](https://web3forms.com) to the developer's inbox and used solely to send you an Apple TestFlight invitation. These details are not sold, shared, or used for any other purpose. Email tyler.kirby9398 [at] gmail.com to have a request deleted. The app itself, once installed, still collects nothing.
+Your private CloudKit records are not sent to the developer as support
+reports. Apple operates iCloud under its [privacy policy](https://www.apple.com/privacy/).
 
-## iCloud Sync
+## On-device diagnostics and Apple services
 
-If you have iCloud enabled on your device, Alexandria uses Apple's CloudKit to sync reading progress and bookmarks across your devices. This data is:
+Alexandria uses Apple's MetricKit to receive crash, hang, CPU, and disk-write
+diagnostics on iPhone and iPad. It keeps up to 20 recent diagnostic records in
+an on-device file, including the app version, receipt date, error details, and
+a shortened call-stack summary. Diagnostic summaries are also written to the
+device's system log. Alexandria does not upload this diagnostic file to the
+developer or sync it through its private CloudKit database.
 
-- Stored in your private iCloud container
-- Governed by [Apple's privacy policy](https://www.apple.com/privacy/)
-- Not accessible to the developer or any third party
-- Deletable by removing the app or disabling iCloud for Alexandria in Settings
+Apple's own diagnostics and distribution services have separate privacy
+practices. In particular, TestFlight automatically collects beta crash logs
+and usage information and shares them with the developer; feedback you send
+through TestFlight is shared as well. See Apple's
+[TestFlight privacy notice](https://www.apple.com/legal/privacy/data/en/test-flight/).
+This is separate from Alexandria's on-device diagnostic file and from the
+private reading and study records described above.
 
-## Data Stored on Device
+## Sharing, exports, and support
 
-Alexandria stores the following data locally on your device:
+Flagging a word saves a record in the app; it does not automatically send a
+message to the developer. You can choose to export flagged words or share a
+saved passage. Developer recovery tools can also export a user-data backup
+or a sync diagnostic report. Backups contain your stored reading and study
+records. Sync reports contain app/build information, record counts, sync
+status, timestamps, and error details.
 
-- **Reading progress** — which texts you've read and your position in each
-- **Bookmarks and saved passages** — passages you choose to save
-- **Vocabulary lists** — words you mark for study
-- **Reading settings** — font size, theme preferences
-- **Bug reports** — if you choose to submit one via the in-app reporter, the report is saved locally
+If you export a file, the destination you choose determines where it is stored.
+If you share it or send it with a support request, its contents are available
+to the recipients and services you select. Review files before sharing them.
+The developer receives your email address, message, and any attachments when
+you choose to contact support.
 
-None of this data leaves your device except through iCloud sync (if enabled).
+## Deleting data
 
-## Children's Privacy
+You can delete individual saved items in the app. Settings also offers resets
+for reading progress, vocabulary, reading statistics, or all user records.
+When sync is enabled and functioning, saved record deletions can propagate to
+iCloud and your other devices. Allow sync to finish before disabling it.
+Reset Everything clears the app's stored reading and study records; it does
+not clear the on-device diagnostic file, exported files, copies held by other
+recipients, or all device preferences. The diagnostic file replaces its oldest
+records as new records arrive, up to the 20-record limit. Resetting Alexandria
+also does not delete diagnostics or feedback already held by Apple or a recipient.
 
-Alexandria does not knowingly collect any data from children. The app contains no objectionable content and is rated 4+.
+Deleting the app from a device does not erase its existing iCloud data.
+Manage cloud data through Apple's iCloud storage controls. See Apple's
+[third-party app data guidance](https://support.apple.com/en-gb/guide/icloud/mm62d92d6b3e/icloud)
+and [app deletion guidance](https://support.apple.com/en-ie/guide/iphone/iph248b543ca/27/ios/27).
+Device backups and exported copies have their own storage and deletion controls.
 
-## Changes to This Policy
+## Website beta signup
 
-If this policy changes, the updated version will be posted at this URL. The "last updated" date at the top will be revised accordingly.
+The beta signup form on the Alexandria website is separate from the app.
+Submitting it sends your name, email address, and optional institution through
+Web3Forms to the developer's inbox to arrange a TestFlight invitation. Web3Forms
+processes that submission as a service provider. Apple operates TestFlight.
+Contact the developer to request deletion of signup information held by the
+developer. Do not include sensitive reading or study information in the signup
+form.
 
-## Contact
+## Children and content
 
-For questions about this privacy policy, contact:
+The app does not ask for a birth date or require an Alexandria account. Its
+library contains classical literature and scholarly dictionary entries.
+Consult the App Store listing for the current age rating and content descriptors.
 
-**J. Tyler Kirby**
-Email: tyler.kirby9398 [at] gmail.com
-GitHub: [TylerKirby](https://github.com/TylerKirby)
+## Contact and updates
+
+For privacy questions or requests about information you sent to the developer,
+email [tyler.kirby9398@gmail.com](mailto:tyler.kirby9398@gmail.com).
+
+Changes to this policy will be published at this page with an updated date.

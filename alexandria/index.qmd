@@ -10,7 +10,7 @@ css: styles.css
 
 Alexandria is a Greek and Latin reader for iPhone and iPad. Tap any word to see its dictionary entry, its morphological parse, and its grammatical features. All of it runs on the device, with no internet connection.
 
-The library holds more than 4,200 texts by over 500 authors, split about evenly between Greek and Latin, drawn from the Perseus and CLTK corpora. The same reading tools work everywhere, whether it's your first page of Homer or your tenth pass through Thucydides.
+The library holds over 4,000 texts by over 500 authors, split about evenly between Greek and Latin, drawn from the Perseus and CLTK corpora. The same reading tools work everywhere, whether it's your first page of Homer or your tenth pass through Thucydides.
 
 ::: {layout-ncol=2}
 ![Home](images/home.png){fig-alt="Alexandria home screen with a currently-reading card for Homer's Iliad, a daily reading streak, and curated reading lists"}
@@ -64,9 +64,9 @@ Start with a short gloss while you read, then open the full entry when you want 
 
 ### Offline & Private
 
-Everything stays on your device. The engine, the dictionaries, and the full text library are bundled in the app. No server calls, no accounts, no tracking. If you use iCloud, your reading progress and saved words sync across your devices through your own private iCloud container.
+Reading, dictionary lookup, and grammatical analysis run on your device. The engine, the dictionaries, and the full text library are bundled in the app. You do not need an Alexandria account. If you enable iCloud sync, your reading and study data sync across your devices through your private iCloud container.
 
-See the full [privacy policy](privacy.qmd).
+See the full [privacy policy](privacy.qmd), or visit [Alexandria Support](support.qmd) for help.
 
 ## What Alexandria Is Not
 
@@ -100,7 +100,7 @@ Alexandria is in beta on TestFlight. Request access below and you'll get an Appl
          placeholder="University, school, or independent" autocomplete="organization">
 
   <button class="beta-button" type="submit">Request Beta Access</button>
-  <p class="beta-note">Your name and email are only used to send you a TestFlight invite. Nothing else.</p>
+  <p class="beta-note">Provide your name and email to request a TestFlight invitation. See our <a href="privacy.html">privacy policy</a> for details.</p>
 </form>
 <div id="beta-success" class="beta-success" hidden>✓ You're on the list. I'll send a TestFlight invite soon.</div>
 
@@ -129,4 +129,4 @@ Alexandria is in beta on TestFlight. Request access below and you'll get an Appl
 </script>
 
 - [Privacy Policy](privacy.qmd)
-- [Source & Issues](https://github.com/TylerKirby/alexandria/issues)
+- [Support](support.qmd)

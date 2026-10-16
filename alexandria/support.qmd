@@ -1,0 +1,24 @@
+---
+title: "Alexandria Support"
+page-layout: article
+css: styles.css
+---
+
+For help with Alexandria Reader, email
+[tyler.kirby9398@gmail.com](mailto:tyler.kirby9398@gmail.com).
+
+Please include your device model, iOS or iPadOS version, Alexandria version
+(shown in Settings), and what you were doing when the problem occurred. For a
+text or dictionary issue, include the author, work, passage, and word involved.
+Screenshots can help, but remove any personal information you do not want to share.
+
+Flagging a word inside the app saves it for review; it does not automatically
+send a support request. You can export flagged words and attach the file to an
+email if you want the developer to investigate them.
+
+If your reading data is not syncing, check Alexandria's iCloud setting and
+whether the app reports a sync problem. Restart after changing the sync setting.
+Contact support before deleting data or resetting the app to troubleshoot sync.
+
+Read the [privacy policy](https://jtylerkirby.com/alexandria/privacy.html) for
+details about local storage, iCloud, and information you choose to share.
